@@ -1,0 +1,75 @@
+@use "../abstracts/functions.scss" as f;
+@use "../abstracts/colors.scss";
+
+.toggle-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s; 
+  padding: 0;
+}
+
+.toggle-span {
+  text-transform: uppercase;
+  letter-spacing: f.rem(5px);
+  font-weight: 700;
+  font-size: f.rem(13px);
+  color: var(--color-toggle-button);
+  fill: var(--color-toggle-button);
+
+  display: flex;
+  gap: f.rem(10px);
+
+  transition: all 0.3s;  
+
+    &:hover {
+      color: var(--color-toggle-button-hover);
+      fill: var(--color-toggle-button-hover);
+    }
+}
+
+
+// .moon {
+//   background-image: url("./assets/icon-moon.svg");
+//   background-repeat: no-repeat;
+//   background-position: right;
+// }
+
+// .sun {
+//   background-image: url("./assets/icon-sun.svg");
+//   background-repeat: no-repeat;
+//   background-position: right;
+// }
+
+
+// Toggle
+// [role="switch"] {  
+//     padding: 0;
+//     width: 2.6rem;
+//     height: 1.5rem;
+//     border: 0;
+//     border-radius: 1rem;
+//     background-color: var(--bright);
+//   }
+
+//   [role="switch"][aria-checked="true"] {
+//     background-color: var(--positive);
+//   }
+
+//   [role="switch"] span {
+//     color: var(--brightest);
+//     padding: 0.1rem;  
+//     pointer-events: none;
+//     border-radius: 2rem;
+//   }
+
+//   [role="switch"][aria-checked="false"] :last-child {
+//     padding-left: .2em;
+//   }
+
+  // This is where the magic happens
+  [role="switch"][aria-checked="true"] .sun,[role="switch"][aria-checked="false"] .moon {
+    // background: var(--brightest);
+    display: none; // with this
+  }
+

@@ -1,0 +1,32 @@
+/* Colors */
+:root {
+    --color-blue: #0079FF;
+    --color-blue-hover: #60ABFF;
+
+    --color-white: hsla(360, 100%, 100%, 1);
+
+    // Error
+    --color-red: #F74646;
+  }
+
+  [data-theme="light"] {
+    --color-body-background: #F6F8FF;
+    --color-main-header: #222731;
+    --color-toggle-button: #4B6A9B;
+    --color-toggle-button-hover: #222731;
+    --color-card-background: #FEFEFE;
+    --color-date-font: #697C9A;
+    --color-stats-num: #2B3442;
+    /* Light theme styles */
+  }
+  
+  [data-theme="dark"] {
+    --color-body-background: #141D2F;
+    --color-main-header: #FFFFFF;
+    --color-toggle-button: #FFFFFF;
+    --color-toggle-button-hover: #90A4D4;
+    --color-card-background: #1E2A47;
+    --color-date-font: #FFFFFF;
+    --color-stats-num: #FFFFFF;
+    /* Dark theme styles */
+  }

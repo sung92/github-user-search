@@ -1,0 +1,15 @@
+{
+  "name": "starter-code",
+  "version": "1.0.0",
+  "description": "![Design preview for the GitHub user search app coding challenge](./preview.jpg)",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Sung Jin Cho",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.3",
+    "parcel": "^2.10.3"
+  }
+}

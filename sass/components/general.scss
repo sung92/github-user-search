@@ -1,0 +1,369 @@
+@use "../abstracts/functions.scss" as f;
+@use "../abstracts/colors.scss";
+
+
+// Utils
+.hidden {
+    display: none !important;
+}
+
+/*HEADER*/
+/********/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.primary-heading {
+    font-size: f.rem(26px);
+    color: var(--color-main-header);
+}
+
+/*SEARCH BAR*/
+/************/
+.github-search-bar {
+    position: relative;
+}
+
+.glass {
+    position: absolute;
+    top: f.rem(22px);
+    left: f.rem(12px);
+}
+
+.search-bar {
+    width: 100%;
+    padding: f.rem(25px) f.rem(40px);
+    border-radius: f.rem(16px);
+    border: none;
+    box-shadow: -9px 9px 15px -1px rgba(0,0,0,0.08);
+    font-size: f.rem(13px);
+    background-color: var(--color-card-background);
+    color: var(--color-main-header);
+
+    &::placeholder {
+        color: var(--color-toggle-button);
+    }
+}
+
+.github-search__button {
+    position: absolute;
+    top: f.rem(5px);
+    right: f.rem(5px);
+    padding: f.rem(20px) f.rem(20px);
+    border-radius: f.rem(16px);
+    border: none;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: f.rem(14px);
+}
+
+    /*Form control styles*/
+    .fa-exclamation-circle {
+        position: absolute;
+        visibility: hidden;
+    
+        top: f.rem(29px);
+        right: f.rem(150px);
+        fill: var(--color-red);
+    }
+
+    .form-control.error .fa-exclamation-circle {
+        visibility: hidden;
+    }
+
+    .form-control small {
+        position: absolute;
+        right: f.rem(20px);
+        top: f.rem(-30px);
+        font-size: f.rem(15px);
+        font-weight: 700;
+        color: var(--color-red);
+        visibility: hidden;
+    }
+
+    .form-control.error small {
+        visibility: visible;
+    }
+
+
+/*GITHUB CARD*/
+/*************/
+
+/*Github Profile*/
+.github-profile-card {
+    margin-top: f.rem(25px);
+    padding: f.rem(25px) f.rem(20px);
+    border-radius: f.rem(15px);
+    background-color: var(--color-card-background);
+    box-shadow: -1px 9px 15px 8px rgba(0,0,0,0.07);
+}
+
+.github-profile {
+    display: flex;
+    gap: f.rem(20px);
+}
+
+.github-profile__img {
+    width: f.rem(70px);
+    border-radius: 50%;
+}
+
+.github-profile_name {
+    font-size: f.rem(16px);
+    color: var(--color-stats-num);
+}
+
+.github-profile_username {
+    font-size: f.rem(13px);
+    color: var(--color-blue);
+}
+
+.github-profile_date {
+    margin-top: f.rem(5px);
+    font-size: f.rem(13px);
+    color: var(--color-date-font);
+}
+
+/*Profile Bio*/
+.github-profile__bio {
+    margin-top: f.rem(30px);
+    font-size: f.rem(13px);
+}
+
+
+/*Profile Stats*/
+.github-profile__stats {
+    background-color: var(--color-body-background);
+    padding: f.rem(20px);
+    border-radius: f.rem(10px);
+    display: flex;
+    justify-content: space-around;
+}
+
+.github-profile__stats li {
+    display: flex;
+    flex-direction: column;
+    gap: f.rem(10px);
+    text-align: center;
+}
+
+.profile__stats-desc {
+    font-size: f.rem(11px);
+    color: var(--color-toggle-button);
+}
+
+.profile__stats-num {
+    font-size: f.rem(16px);
+    font-weight: 700;
+    color: var(--color-stats-num);
+}
+
+/*Profile Socials*/
+.github-profile__socials {
+    margin-top: f.rem(30px);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: f.rem(20px);
+}
+
+.github-profile__socials li {
+    display: flex;
+    gap: f.rem(20px);
+    
+}
+
+.profile__socials-text {
+    font-size: f.rem(13px);
+}
+
+.profile__socials-link {
+    display: inline-block;
+    font-size: f.rem(13px);
+    text-decoration: none;
+    color: var(--color-toggle-button);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+[data-available="true"] {
+    color: var(--color-toggle-button);
+}
+
+[data-available="false"] {
+    color: var(--color-toggle-button);
+    opacity: 0.5;
+}
+
+// Tablet
+@media (width > 31.25em) {
+    header {
+        max-width: f.rem(573px);
+    }
+
+    .glass {
+        top: f.rem(27px);
+        left: f.rem(28px);
+    }
+
+    .search-bar {
+        padding: f.rem(25px) f.rem(70px);
+        font-size: f.rem(18px);
+    }
+
+    .github-search__button {
+        top: f.rem(11px);
+        right: f.rem(5px);
+        padding: f.rem(16px) f.rem(24px);
+        font-size: f.rem(16px);
+    }
+
+    .github-profile-card {
+        margin-top: f.rem(25px);
+        padding: f.rem(45px) f.rem(40px);;
+    }
+
+    .github-profile {
+        display: flex;
+        align-items: center;
+        gap: f.rem(40px);
+    }
+
+    .github-profile__img {
+        width: f.rem(117px);
+    }
+
+    .github-profile_name {
+        font-size: f.rem(26px);
+    }
+
+    .github-profile_username {
+        font-size: f.rem(16px);
+    }
+
+    .github-profile_date {
+        font-size: f.rem(15px);
+    }
+
+    .github-profile__bio {
+        font-size: f.rem(15px);
+    }
+
+    .github-profile__stats li {
+        gap: f.rem(5px);
+        text-align: left;
+    }
+
+    .profile__stats-desc {
+        font-size: f.rem(13px);
+    }
+
+    .profile__stats-num {
+        font-size: f.rem(22px);
+    }
+
+    .github-profile__socials {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: f.rem(20px);
+
+        & li:nth-child(3) {
+            grid-row-start: 1;
+            grid-column-start: 2;
+        }
+    }
+
+    .profile__socials-text {
+        font-size: f.rem(15px);
+    }
+}
+
+// Desktop
+@media (width > 56.25em) {
+    // utils: Margin left
+    .margin-left-desktop {
+        margin-left: f.rem(148px);
+    }
+
+    header {
+        max-width: f.rem(730px);
+    }
+
+    .github-search__button {
+        top: f.rem(9px);
+        right: f.rem(11px);
+        padding: f.rem(17px) f.rem(30px);
+        font-size: f.rem(16px);
+        cursor: pointer;
+
+        transition: all 0.3s;
+
+        &:hover {
+            background-color: var(--color-blue-hover);
+        }
+    }
+
+    /*Form control styles*/
+    .fa-exclamation-circle {
+        position: absolute;
+        visibility: hidden;
+    
+        top: f.rem(29px);
+        right: f.rem(150px);
+        fill: var(--color-red);
+    }
+
+    .form-control.error .fa-exclamation-circle {
+        visibility: visible;
+    }
+
+    .form-control small {
+        position: absolute;
+        right: f.rem(180px);
+        top: f.rem(29px);
+        font-size: f.rem(15px);
+        font-weight: 700;
+        color: var(--color-red);
+        visibility: hidden;
+    }
+    
+    .form-control.error small {
+        visibility: visible;
+    }
+
+    .github-profile {
+        position: relative;
+    }
+
+    .github-profile__img {
+        margin-top: f.rem(60px);
+        position: absolute;
+    }
+
+    .github-profile_date {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .github-profile__bio {
+        margin-top: f.rem(20px);
+    }
+
+    .github-profile__stats {
+        margin-top: f.rem(40px);
+        padding-left: f.rem(40px);
+        justify-content: left;
+        gap: f.rem(100px);
+    }
+
+    .github-profile__socials {
+        margin-top: f.rem(40px);
+    }
+}
